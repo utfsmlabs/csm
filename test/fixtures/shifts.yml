@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term: one
+  block: one
+  employee: one
+
+two:
+  term: two
+  block: two
+  employee: two

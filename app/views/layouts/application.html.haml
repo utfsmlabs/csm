@@ -1,0 +1,65 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Csm
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.red
+      .nav-wrapper
+
+        %div.brand-logo
+          // Replace this with an image
+          CSM
+
+        %a{href: "#", class: "button-collapse", data: {activates: "example"}}
+          %i.material-icons menu
+
+        // Normal NavBar that goes across the top
+        %ul.right.hide-on-med-and-down
+          %li
+            =link_to "Link 1"
+          %li
+            = link_to "Link 2"
+          %li
+            = link_to "Link 3"
+
+          // Drop Down Menu
+          %li
+            %a{href: "#", class: "dropdown-button", data: {activates: "myDropdown"}}
+              = "Drop Down Menu"
+              %i.material-icons.right arrow_drop_down
+            %ul{id: "myDropdown", class: "dropdown-content"}
+              %li
+                = link_to "Drop Down Link 1"
+              %li
+                = link_to "Drop Down Link 2"
+              %li
+                = link_to "Drop Down Link 3"
+
+        // Mobile Sidebar
+        %ul#example.side-nav
+
+          %li
+            = link_to "Link 1"
+          %li
+            = link_to "Link 2"
+          %li
+            = link_to "Link 3"
+
+            // Drow Down Menu on the mobile sidebar
+            %li
+              %a{href: "#", class: "dropdown-button", data: {activates: "myDropDownSide"}}
+                = "Admin Menu"
+                %i.material-icons.right.fix-line-height arrow_drop_down
+              %ul{id: "myDropDownSide", class: "dropdown-content dropdown-content-sidebar-fix"}
+                %li
+                  = link_to "Drop Down Link 1"
+                %li
+                  = link_to "Drop Down Link 2"
+                %li
+                  = link_to "Drop Down Link 3"
+    .container
+      = yield
