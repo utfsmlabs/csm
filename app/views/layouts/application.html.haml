@@ -2,17 +2,17 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Csm
+    %title CSM: CTM v3, or Custom Schedule Manager
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+  %body{:class => "grey lighten-5"}
     %nav.red
       .nav-wrapper
 
         %div.brand-logo
           // Replace this with an image
-          CSM
+          #title CSM
 
         %a{href: "#", class: "button-collapse", data: {activates: "example"}}
           %i.material-icons menu
@@ -20,11 +20,11 @@
         // Normal NavBar that goes across the top
         %ul.right.hide-on-med-and-down
           %li
-            =link_to "Link 1"
+            = link_to "Checkin"
           %li
-            = link_to "Link 2"
+            = link_to "Schedule"
           %li
-            = link_to "Link 3"
+            = link_to "Logs"
 
           // Drop Down Menu
           %li
@@ -43,11 +43,11 @@
         %ul#example.side-nav
 
           %li
-            = link_to "Link 1"
+            = link_to "Checkin"
           %li
-            = link_to "Link 2"
+            = link_to "Schedule"
           %li
-            = link_to "Link 3"
+            = link_to "Logs"
 
             // Drow Down Menu on the mobile sidebar
             %li
