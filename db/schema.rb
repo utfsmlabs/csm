@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318205050) do
+ActiveRecord::Schema.define(version: 20170320214134) do
+
+  create_table "Blocks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "weekday"
+    t.time     "start"
+    t.time     "end"
+    t.boolean  "meeting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -43,16 +53,6 @@ ActiveRecord::Schema.define(version: 20170318205050) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "blocks", force: :cascade do |t|
-    t.string   "name"
-    t.string   "weekday"
-    t.time     "start"
-    t.time     "end"
-    t.boolean  "meeting"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "employees", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20170318205050) do
     t.date     "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "unavailable_blocks", force: :cascade do |t|

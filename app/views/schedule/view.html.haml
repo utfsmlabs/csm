@@ -1,0 +1,12 @@
+.row.col.s12.m6.card.card-content
+  %table.centered
+    %thead
+      %tr
+        %th{"data-field" => "id"} Bloque
+        -for day in @week 
+          %th{"data-field" => "name"} 
+            = day
+    %tbody
+      -for day in @week
+        %tr
+          %td asd
