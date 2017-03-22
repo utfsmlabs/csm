@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start: 2017-03-21 20:06:10
+  end: 2017-03-21 20:06:10
+  meeting: false
+
+two:
+  name: MyString
+  start: 2017-03-21 20:06:10
+  end: 2017-03-21 20:06:10
+  meeting: false

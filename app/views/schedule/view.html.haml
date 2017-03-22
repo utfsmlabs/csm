@@ -1,5 +1,5 @@
 .row.col.s12.m6.card.card-content
-  %table.centered
+  %table.centered.striped
     %thead
       %tr
         %th{"data-field" => "id"} Bloque
@@ -7,6 +7,12 @@
           %th{"data-field" => "name"} 
             = day
     %tbody
-      -for day in @week
+      -for timeBlock in @timeBlocks
         %tr
-          %td asd
+          %td 
+            %strong= timeBlock.name
+          -for block in Block.where(timeBlock: timeBlock).order(:weekday)
+            %td
+              -for shift in block.shifts
+                = shift.employee.name 
+                %br
